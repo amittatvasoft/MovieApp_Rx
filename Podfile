@@ -17,9 +17,6 @@ def shared_pods
     pod 'SwiftyJSON'
     pod 'IQKeyboardManagerSwift'
 
-    # Activity Indicator
-    pod 'MBProgressHUD'
-
     # PagerView
     pod 'FSPagerView'
 

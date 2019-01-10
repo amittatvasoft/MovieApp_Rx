@@ -6,8 +6,6 @@
 //  Copyright © 2019 MAC110. All rights reserved.
 //
 import UIKit
-import MBProgressHUD
-
 
 protocol ActivityIndicatorViewable {
     
@@ -17,6 +15,10 @@ protocol ActivityIndicatorViewable {
 extension ActivityIndicatorViewable where Self: UIViewController {
     
     func showActivityIndicator(in _containerView:UIView? = nil) -> Void {
+
+        HUD.show()
+        /*
+
         var containerView:UIView = self.view
         
         if let _containerView = _containerView {
@@ -30,9 +32,13 @@ extension ActivityIndicatorViewable where Self: UIViewController {
         hud.backgroundView.color =  UIColor.black.withAlphaComponent(0.3)
         hud.backgroundView.style = .solidColor
         hud.show(animated: true)
+        */
     }
     
     func hideActivityIndicator(from _containerView:UIView? = nil) -> Void {
+
+        HUD.hide()
+        /*
         var containerView:UIView = self.view
         
         if let _containerView = _containerView {
@@ -40,5 +46,6 @@ extension ActivityIndicatorViewable where Self: UIViewController {
         }
         
         MBProgressHUD.hideAllHUDs(for: containerView, animated: true)
+        */
     }
 }

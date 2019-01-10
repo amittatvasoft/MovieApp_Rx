@@ -4,7 +4,6 @@ PODS:
   - FSPagerView (0.8.0)
   - IQKeyboardManagerSwift (6.1.1)
   - Kingfisher (4.10.0)
-  - MBProgressHUD (1.1.0)
   - RxAlamofire (4.3.0):
     - RxAlamofire/Core (= 4.3.0)
   - RxAlamofire/Core (4.3.0):
@@ -24,7 +23,6 @@ DEPENDENCIES:
   - FSPagerView
   - IQKeyboardManagerSwift
   - Kingfisher
-  - MBProgressHUD
   - RxAlamofire
   - RxCocoa
   - RxGesture
@@ -38,7 +36,6 @@ SPEC REPOS:
     - FSPagerView
     - IQKeyboardManagerSwift
     - Kingfisher
-    - MBProgressHUD
     - RxAlamofire
     - RxCocoa
     - RxGesture
@@ -51,13 +48,12 @@ SPEC CHECKSUMS:
   FSPagerView: 53d0cd11a233d662ff23e37ed8ee4ecea3cec693
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxGesture: b329dd74ea8d607b176484063e728d6db06c6d59
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 7676a2e27b979ef68c636c55e18bce1ba6e3b1a3
+PODFILE CHECKSUM: fd7243ba44d7f54d63e8667b928b00d4163e33a5
 
 COCOAPODS: 1.5.3

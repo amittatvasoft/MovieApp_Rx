@@ -35,8 +35,7 @@ class RootCoordinator: Coordinator<Void>{
         viewModel.rightBarButtonDidTapped.asObservable()
             .subscribe(onNext: {[weak self] _ in
                 guard let `self` = self else {return}
-                self.showMovieListScreen()
-                //self.showSearchScreen()
+                self.showSearchScreen()
             }).disposed(by: disposeBag)
 
         self.navigationController.pushViewController(viewController, animated: true)
@@ -48,14 +47,22 @@ class RootCoordinator: Coordinator<Void>{
         viewController.viewModel = viewModel
         let navVC = UINavigationController(rootViewController: viewController)
         viewModel.dismiss.asObservable()
-            .subscribe(onNext: { _ in
+            .subscribe(onNext: { [weak self] _ in
                 navVC.dismiss(animated: true, completion: nil)
+            }).disposed(by: self.disposeBag)
+
+        viewModel.searchDidTapped.asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                guard let `self` = self else {return}
+                navVC.dismiss(animated: true, completion: {
+                    self.showMovieListScreen(searchString: viewModel.searchString.value)
+                })
             }).disposed(by: self.disposeBag)
 
         self.navigationController.visibleViewController?.present(navVC, animated: true, completion: nil)
     }
 
-    private func showMovieListScreen(){
+    private func showMovieListScreen(searchString: String){
         let movieListCoordinator = MovieListCoordinator.init(navigationController: self.navigationController, dependencies: self.dependencies, searchString: "")
         _ = coordinate(to: movieListCoordinator)
     }

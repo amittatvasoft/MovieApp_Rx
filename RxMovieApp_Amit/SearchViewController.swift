@@ -19,7 +19,7 @@ class SearchViewController: BaseViewController {
         if let txfSearchField = searchbar.value(forKey: "_searchField") as? UITextField {
             txfSearchField.borderStyle = .none
             txfSearchField.backgroundColor = .white
-            txfSearchField.cornerRadius = 15
+            txfSearchField.cornerRadius = 14
             txfSearchField.rx.controlEvent([.editingDidEndOnExit])
                 .bind(to: viewModel.searchDidTapped)
                 .disposed(by: disposeBag)

@@ -78,6 +78,7 @@ extension HomeViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     func pagerViewDidScroll(_ pagerView: FSPagerView) {
         let page = pagerView.currentIndex
         self.lblMovieTitle.text = self.viewModel.movies.value[Int(page)].title ?? ""
+        self.lblMovieType.text  = self.viewModel.movies.value[Int(page)].genrnString
     }
 
     func refreshPagerView(_ selectedIndex: Int){

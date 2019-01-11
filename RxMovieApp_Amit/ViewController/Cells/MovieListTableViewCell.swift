@@ -26,6 +26,8 @@ class MovieListTableViewCell: UITableViewCell {
         self.lblInfo.text = movie.description ?? ""
         self.lblReleaseDate.text = movie.releaseDateString
         self.vwRating.rating = (movie.rate ?? 1.0) / 2
+
+        
     }
 
 }

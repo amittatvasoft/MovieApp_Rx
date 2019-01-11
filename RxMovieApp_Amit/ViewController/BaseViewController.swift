@@ -31,9 +31,11 @@ class BaseViewController: UIViewController, ActivityIndicatorViewable,Navigation
             .distinctUntilChanged()
             .drive(onNext: { [weak self] (isLoading) in
                 guard let `self` = self else { return }
-                self.hideActivityIndicator()
+
                 if isLoading {
                     self.showActivityIndicator()
+                } else {
+                    self.hideActivityIndicator()
                 }
             })
             .disposed(by: disposeBag)

@@ -137,48 +137,19 @@
 		1419181C21E62FDC00D361C1 /* RxMovieApp_Amit */ = {
 			isa = PBXGroup;
 			children = (
-				149E5E5321E77B8600063136 /* RxMovieApp_Amit-Bridging-Header.h */,
-				14CD293921E8C8200079E543 /* FloatRatingView.swift */,
-				149E5E4D21E77A7400063136 /* HUD */,
-				1419181D21E62FDC00D361C1 /* AppDelegate.swift */,
-				1419182F21E6349700D361C1 /* AppCoordinator.swift */,
-				149E5E1E21E7153A00063136 /* RootCoordinator.swift */,
-				149E5E1221E7129400063136 /* BaseViewModel.swift */,
-				149E5E1021E7127200063136 /* HomeViewModel.swift */,
-				149E5E3521E7188700063136 /* SearchViewModel.swift */,
-				149E5E3F21E7498700063136 /* MovieListPageContainerViewModel.swift */,
-				149E5E1421E7131500063136 /* Movie.swift */,
-				149E5E1621E7135C00063136 /* HomeMovieListResopnse.swift */,
-				1419183121E634F900D361C1 /* AppDependency.swift */,
-				1419183521E6362D00D361C1 /* Coordinator.swift */,
-				149E5E4B21E74E7F00063136 /* MovieListCoordinator.swift */,
-				1419183321E6357100D361C1 /* API.swift */,
-				149E5E1A21E7149D00063136 /* APIManager.swift */,
-				149E5E1C21E714CE00063136 /* APIRouter.swift */,
-				149E5E1821E7144400063136 /* APIResult.swift */,
-				149E5E3121E7178400063136 /* APICallError.swift */,
-				149E5E2021E715CC00063136 /* SearchHistory.swift */,
-				1419183721E6371B00D361C1 /* Dictionary+CamelCase.swift */,
-				1419183921E6375700D361C1 /* String+CamelCase.swift */,
-				149E5E2B21E7164500063136 /* Extension+UIKit.swift */,
+				14CD293B21E8DCC10079E543 /* Application */,
+				14CD294321E8DDD50079E543 /* Coordinator */,
+				14CD294221E8DD9F0079E543 /* Extension */,
+				14CD294121E8DD8B0079E543 /* Network */,
+				14CD294021E8DD770079E543 /* Libraries */,
+				14CD293D21E8DD090079E543 /* ViewModel */,
+				14CD293C21E8DCF50079E543 /* ViewController */,
 				149E5E2621E7162A00063136 /* RxActivityViewable */,
-				149E5E2221E7160E00063136 /* UIStoryboard+UIViewControllers.swift */,
-				149E5E2421E7161D00063136 /* Logging.swift */,
-				149E5E3721E7191C00063136 /* HomeMovieCollectionViewCell.swift */,
-				149E5E3921E7193500063136 /* HomeMovieCollectionViewCell.xib */,
-				1419181F21E62FDC00D361C1 /* ViewController.swift */,
-				149E5E3321E7184200063136 /* BaseViewController.swift */,
-				149E5E2D21E7170E00063136 /* HomeViewController.swift */,
-				149E5E2F21E7171F00063136 /* SearchViewController.swift */,
-				149E5E4121E74A8200063136 /* MovieListPageContainerViewController.swift */,
-				149E5E4321E74B3400063136 /* MovieListViewController.swift */,
-				149E5E4521E74BB400063136 /* MovieListViewModel.swift */,
-				149E5E4721E74CBB00063136 /* MovieListTableViewCell.swift */,
-				149E5E4821E74CBB00063136 /* MovieListTableViewCell.xib */,
 				149E5E3B21E719C600063136 /* Main.storyboard */,
 				1419182421E62FE200D361C1 /* Assets.xcassets */,
 				1419182621E62FE200D361C1 /* LaunchScreen.storyboard */,
 				1419182921E62FE200D361C1 /* Info.plist */,
+				149E5E5321E77B8600063136 /* RxMovieApp_Amit-Bridging-Header.h */,
 			);
 			path = RxMovieApp_Amit;
 			sourceTree = "<group>";
@@ -200,6 +171,107 @@
 				149E5E5021E77A7400063136 /* MMMaterialDesignSpinner.m */,
 			);
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		14CD293B21E8DCC10079E543 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1419183121E634F900D361C1 /* AppDependency.swift */,
+				1419181D21E62FDC00D361C1 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		14CD293C21E8DCF50079E543 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1419181F21E62FDC00D361C1 /* ViewController.swift */,
+				149E5E3321E7184200063136 /* BaseViewController.swift */,
+				149E5E2D21E7170E00063136 /* HomeViewController.swift */,
+				149E5E2F21E7171F00063136 /* SearchViewController.swift */,
+				149E5E4121E74A8200063136 /* MovieListPageContainerViewController.swift */,
+				149E5E4321E74B3400063136 /* MovieListViewController.swift */,
+				14CD293F21E8DD390079E543 /* Cells */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		14CD293D21E8DD090079E543 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14CD293E21E8DD1A0079E543 /* Model */,
+				149E5E1221E7129400063136 /* BaseViewModel.swift */,
+				149E5E1021E7127200063136 /* HomeViewModel.swift */,
+				149E5E3521E7188700063136 /* SearchViewModel.swift */,
+				149E5E4521E74BB400063136 /* MovieListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14CD293E21E8DD1A0079E543 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				149E5E2021E715CC00063136 /* SearchHistory.swift */,
+				149E5E1421E7131500063136 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14CD293F21E8DD390079E543 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				149E5E4721E74CBB00063136 /* MovieListTableViewCell.swift */,
+				149E5E4821E74CBB00063136 /* MovieListTableViewCell.xib */,
+				149E5E3721E7191C00063136 /* HomeMovieCollectionViewCell.swift */,
+				149E5E3921E7193500063136 /* HomeMovieCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		14CD294021E8DD770079E543 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				149E5E2421E7161D00063136 /* Logging.swift */,
+				14CD293921E8C8200079E543 /* FloatRatingView.swift */,
+				149E5E4D21E77A7400063136 /* HUD */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		14CD294121E8DD8B0079E543 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				149E5E1621E7135C00063136 /* HomeMovieListResopnse.swift */,
+				1419183321E6357100D361C1 /* API.swift */,
+				149E5E1A21E7149D00063136 /* APIManager.swift */,
+				149E5E1C21E714CE00063136 /* APIRouter.swift */,
+				149E5E1821E7144400063136 /* APIResult.swift */,
+				149E5E3121E7178400063136 /* APICallError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		14CD294221E8DD9F0079E543 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				149E5E2221E7160E00063136 /* UIStoryboard+UIViewControllers.swift */,
+				1419183721E6371B00D361C1 /* Dictionary+CamelCase.swift */,
+				1419183921E6375700D361C1 /* String+CamelCase.swift */,
+				149E5E2B21E7164500063136 /* Extension+UIKit.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		14CD294321E8DDD50079E543 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1419182F21E6349700D361C1 /* AppCoordinator.swift */,
+				149E5E1E21E7153A00063136 /* RootCoordinator.swift */,
+				149E5E3F21E7498700063136 /* MovieListPageContainerViewModel.swift */,
+				1419183521E6362D00D361C1 /* Coordinator.swift */,
+				149E5E4B21E74E7F00063136 /* MovieListCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		46896CEF843E600B48E8E7FA /* Pods */ = {

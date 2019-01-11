@@ -26,12 +26,18 @@ final class MovieListViewModel: BaseViewModel {
 
     var movies: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
 
+    var callNextPage = PublishSubject<Void>()
+
     init(dependencies: Dependencies,launchOption: LaunchOption,searchString: String){
         self.dependencies = dependencies
         self.launchOption = launchOption
         self.searchString = searchString
         super.init()
         self.callGetMovieListAPI()
+        self.callNextPage.asObservable().subscribe(onNext:{[weak self] _ in
+            guard let `self` = self else {return}
+            self.callGetMovieListAPI()
+        }).disposed(by: disposeBag)
     }
 }
 extension MovieListViewModel{

@@ -27,7 +27,6 @@ class HomeViewController: BaseViewController {
             self.moviesFSPagerView.isInfinite = true
             self.moviesFSPagerView.interitemSpacing = 0
             self.moviesFSPagerView.contentMode = .scaleAspectFit
-            self.moviesFSPagerView.automaticSlidingInterval = 5.0
             let transformer = FSPagerViewTransformer.init(type: .linear)
             transformer.minimumScale = 0.95
             transformer.minimumAlpha = 1.0
@@ -51,12 +50,11 @@ extension HomeViewController {
     }
 
     private func setupUI() {
-        self.configureNavigationWithTitle(title: "Home", rightButtonImage: UIImage(named: "search"))
+        self.configureNavigationWithTitle(title: "Movie", rightButtonImage: UIImage(named: "search"))
     }
 
     private func setupBinding(viewModel: HomeViewModel) {
         super.setupBindingForBaseViewModel(viewModel: viewModel)
-
         self.viewModel.movies.asObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {[weak self] _ in
@@ -65,8 +63,11 @@ extension HomeViewController {
                 self.lblMovieTitle.text = self.viewModel.movies.value.first?.title ?? ""
                 self.lblMovieType.text = self.viewModel.movies.value.first?.genrnString ?? ""
                 self.selectedIndex = 0
+//                if let cell = self.moviesFSPagerView.cellForItem(at: 0){
+//                    cell.isSelected = true
+//                }
+                self.moviesFSPagerView.automaticSlidingInterval = 5.0
             }).disposed(by: disposeBag)
-
     }
 }
 
@@ -79,6 +80,7 @@ extension HomeViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "HomeMovieCollectionViewCell", at: index) as! HomeMovieCollectionViewCell
         cell.configure(movie: viewModel.movies.value[index])
+        cell.isSelected = true
         return cell
     }
 
@@ -86,17 +88,12 @@ extension HomeViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         let page = pagerView.currentIndex
         self.lblMovieTitle.text = self.viewModel.movies.value[Int(page)].title ?? ""
         self.lblMovieType.text = self.viewModel.movies.value[Int(page)].genrnString
-    }
-
-    func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
-        cell.isSelected = true
+        //pagerView.cellForItem(at: page)?.isSelected = false
+        self.selectedIndex = page
+        //pagerView.cellForItem(at: page)?.isSelected = true
     }
 
     func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
         cell.isSelected = false
-    }
-
-    func refreshPagerView(_ selectedIndex: Int){
-
     }
 }

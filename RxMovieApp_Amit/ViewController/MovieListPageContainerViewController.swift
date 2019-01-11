@@ -67,6 +67,8 @@ extension MovieListPageContainerViewController {
     func moveDeviderToIndex(index: Int) {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else {return}
+            self.btnNowShowing.isSelected = index == 0
+            self.btnCommingSoon.isSelected = index == 1
             UIView.animate(withDuration: 0.3, animations: {
                 let x = CGFloat(index) * (UIScreen.main.bounds.width * 0.5)
                 self.vwDivider.frame.origin.x = x

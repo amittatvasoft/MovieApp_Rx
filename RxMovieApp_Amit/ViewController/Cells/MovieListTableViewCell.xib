@@ -157,7 +157,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="star_filled" width="16" height="16"/>
-        <image name="star_not_filled" width="16" height="16"/>
+        <image name="star_filled" width="96" height="96"/>
+        <image name="star_not_filled" width="96" height="96"/>
     </resources>
 </document>

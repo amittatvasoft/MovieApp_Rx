@@ -19,17 +19,18 @@ class HomeMovieCollectionViewCell: FSPagerViewCell {
     override var isSelected: Bool{
         didSet{
             if isSelected{
-//                let oldFrame = vwBuyTicket.frame
-//                var newFrame = oldFrame
-//                newFrame.origin.y = newFrame.origin.y + 40
-//                self.vwBuyTicket.frame = newFrame
+                let oldFrame = vwBuyTicket.frame
+                var newFrame = oldFrame
+                newFrame.origin.y = newFrame.origin.y + 40
+                self.vwBuyTicket.frame = newFrame
                 self.vwBuyTicket.isHidden = false
-                //buyTktBottomConstraint.constant = 30
-                self.vwBuyTicket.layoutIfNeeded()
+                UIView.animate(withDuration: 1, animations: {
+                    self.vwBuyTicket.frame = oldFrame
+                }) { (status) in
+                    self.vwBuyTicket.layoutIfNeeded()
+                }
             }else{
                 vwBuyTicket.isHidden = true
-                //buyTktBottomConstraint.constant = 0
-                self.vwBuyTicket.layoutIfNeeded()
             }
         }
     }

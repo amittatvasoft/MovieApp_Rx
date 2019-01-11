@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MovieListViewController: BaseViewController {
 
@@ -46,6 +48,18 @@ extension MovieListViewController{
             .bind(to: tblMovieList.rx.items(cellIdentifier: "MovieListTableViewCell", cellType: MovieListTableViewCell.self)) { (row, element, cell) in
                 cell.configure(movie: element)
             }
+            .disposed(by: disposeBag)
+        tblMovieList.rx
+            .willDisplayCell
+            .filter({[weak self] (cell, indexPath) in
+                guard let `self` = self else { return false }
+                return (indexPath.row + 1) == self.tblMovieList.numberOfRows(inSection: indexPath.section) - 3
+            })
+            .throttle(1.0, scheduler: MainScheduler.instance)
+            .map({ event -> Void in
+                return Void()
+            })
+            .bind(to: viewModel.callNextPage)
             .disposed(by: disposeBag)
     }
 }

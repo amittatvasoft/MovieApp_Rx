@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D8C4349A3C6BC5C952ABEC9CBF4A03C"
+               BlueprintIdentifier = "355FABCE7773EE79E9DDCB7468AACB97"
                BlueprintName = "RxGesture"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "RxGesture.framework">

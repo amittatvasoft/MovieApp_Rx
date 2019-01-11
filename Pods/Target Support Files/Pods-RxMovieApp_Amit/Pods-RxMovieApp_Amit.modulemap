@@ -1,6 +1,0 @@
-framework module Pods_RxMovieApp_Amit {
-  umbrella header "Pods-RxMovieApp_Amit-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -22,11 +22,11 @@ def shared_pods
 
 end
 
-target 'RxMovieApp_Amit' do
+target 'RXMovieApp' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for RxMovieApp_Amit
+  # Pods for RXMovieApp
 
     shared_pods
 

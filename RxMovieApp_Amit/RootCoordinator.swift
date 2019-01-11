@@ -59,6 +59,14 @@ class RootCoordinator: Coordinator<Void>{
                 })
             }).disposed(by: self.disposeBag)
 
+        viewModel.selectedKeyword.asObservable()
+            .subscribe(onNext: { [weak self] (keyword) in
+                guard let `self` = self , let keyword = keyword else {return}
+                navVC.dismiss(animated: true, completion: {
+                    self.showMovieListScreen(searchString: keyword)
+                })
+            }).disposed(by: self.disposeBag)
+
         self.navigationController.visibleViewController?.present(navVC, animated: true, completion: nil)
     }
 

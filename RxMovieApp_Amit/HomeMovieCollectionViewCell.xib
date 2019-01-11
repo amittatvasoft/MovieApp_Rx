@@ -38,7 +38,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djy-1D-n3J">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djy-1D-n3J">
                                         <rect key="frame" x="0.0" y="280" width="200" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY TICKET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-rx-c9t">
@@ -118,6 +118,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="buyTktBottomConstraint" destination="2ZP-Sz-w4m" id="ybB-pt-uyf"/>
                 <outlet property="imgVwPoster" destination="kX1-FG-Ayx" id="eXt-7z-Yqi"/>
                 <outlet property="lblPreSale" destination="1oy-aX-3f2" id="rZ2-o2-PT4"/>
                 <outlet property="vwBuyTicket" destination="vWr-rx-c9t" id="CdE-SA-5FQ"/>

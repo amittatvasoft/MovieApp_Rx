@@ -73,5 +73,11 @@ extension SearchViewController{
             self.viewModel.deleteElement(for: indexPath)
         }).disposed(by: disposeBag)
 
+        self.tblHistory
+            .rx
+            .modelSelected(String.self)
+            .bind(to: viewModel.selectedKeyword)
+            .disposed(by: disposeBag)
+
     }
 }

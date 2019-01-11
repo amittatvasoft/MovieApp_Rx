@@ -527,6 +527,12 @@ open class FSPagerView: UIView,UICollectionViewDataSource,UICollectionViewDelega
         }
         return indexPath.item
     }
+
+    @objc(cellForItemAtIndex:)
+    open func cellForItem(at index: Int) -> FSPagerViewCell? {
+        let indexPath = self.nearbyIndexPath(for: index)
+        return self.collectionView.cellForItem(at: indexPath) as? FSPagerViewCell
+    }
     
     // MARK: - Private functions
     

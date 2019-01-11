@@ -24,6 +24,8 @@ class SearchViewModel: BaseViewModel{
     var dismiss         = PublishSubject<Void>()
     var searchDidTapped = PublishSubject<Void>()
 
+    let selectedKeyword = PublishSubject<String?>()
+
     init(dependencies: Dependencies){
         self.dependencies  = dependencies
         self.searchHistory = dependencies.searchHistory.arrKeyword.asObservable()

@@ -22,6 +22,8 @@ class MovieListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+
+        tblMovieList.tableFooterView = UIView()
     }
 
     override func viewDidAppear(_ animated: Bool) {

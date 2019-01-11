@@ -48,6 +48,7 @@
 		149E5E4C21E74E7F00063136 /* MovieListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149E5E4B21E74E7F00063136 /* MovieListCoordinator.swift */; };
 		149E5E5121E77A7400063136 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149E5E4F21E77A7400063136 /* HUD.swift */; };
 		149E5E5221E77A7400063136 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 149E5E5021E77A7400063136 /* MMMaterialDesignSpinner.m */; };
+		14CD293A21E8C8200079E543 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD293921E8C8200079E543 /* FloatRatingView.swift */; };
 		DB8205B32E80692ED4B6DA5D /* Pods_RxMovieApp_Amit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8895A29C831FBBA29A2DC5 /* Pods_RxMovieApp_Amit.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		149E5E4F21E77A7400063136 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		149E5E5021E77A7400063136 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		149E5E5321E77B8600063136 /* RxMovieApp_Amit-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RxMovieApp_Amit-Bridging-Header.h"; sourceTree = "<group>"; };
+		14CD293921E8C8200079E543 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		B73DC75E891ACC252FE6E488 /* Pods-RxMovieApp_Amit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMovieApp_Amit.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxMovieApp_Amit/Pods-RxMovieApp_Amit.release.xcconfig"; sourceTree = "<group>"; };
 		B97B89FBD76DE848E1187F21 /* Pods-RxMovieApp_Amit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMovieApp_Amit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxMovieApp_Amit/Pods-RxMovieApp_Amit.debug.xcconfig"; sourceTree = "<group>"; };
 		CA8895A29C831FBBA29A2DC5 /* Pods_RxMovieApp_Amit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMovieApp_Amit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				149E5E5321E77B8600063136 /* RxMovieApp_Amit-Bridging-Header.h */,
+				14CD293921E8C8200079E543 /* FloatRatingView.swift */,
 				149E5E4D21E77A7400063136 /* HUD */,
 				1419181D21E62FDC00D361C1 /* AppDelegate.swift */,
 				1419182F21E6349700D361C1 /* AppCoordinator.swift */,
@@ -380,6 +383,7 @@
 				1419183421E6357100D361C1 /* API.swift in Sources */,
 				149E5E4021E7498700063136 /* MovieListPageContainerViewModel.swift in Sources */,
 				149E5E4621E74BB400063136 /* MovieListViewModel.swift in Sources */,
+				14CD293A21E8C8200079E543 /* FloatRatingView.swift in Sources */,
 				149E5E4221E74A8200063136 /* MovieListPageContainerViewController.swift in Sources */,
 				149E5E3621E7188700063136 /* SearchViewModel.swift in Sources */,
 				149E5E2121E715CC00063136 /* SearchHistory.swift in Sources */,
@@ -524,7 +528,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxMovieApp_Amit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxMovieApp-Amit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RxMovieApp_Amit/RxMovieApp_Amit-Bridging-Header.h";
@@ -540,7 +547,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxMovieApp_Amit/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxMovieApp-Amit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RxMovieApp_Amit/RxMovieApp_Amit-Bridging-Header.h";

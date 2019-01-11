@@ -9,8 +9,8 @@
 import Foundation
 
 class HomeMovieListResopnse: Codable {
-    var success : Bool?
-    var results : [Movie] = []
+    var success: Bool?
+    var results: [Movie] = []
     init(response: [String:Any]?){
         guard let response = response else {return}
 
@@ -18,18 +18,18 @@ class HomeMovieListResopnse: Codable {
             self.success = success
         }
 
-        if let results = response["results"] as? [[String: Any]] {
-            for result in results {
+        if let results = response["results"] as? [[String: Any]]{
+            for result in results{
                 if let movieData = try? JSONSerialization.data(withJSONObject: result.keysToCamelCase, options: []) {
                     do {
                         if let movie = try? JSONDecoder().decode(Movie.self, from: movieData) {
                             self.results.append(movie)
                         }
-                    } catch (let error) {
-                        print(error)
                     }
                 }
             }
         }
     }
 }
+
+

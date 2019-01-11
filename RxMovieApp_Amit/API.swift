@@ -36,6 +36,18 @@ class API {
         })
     }
 
+    func searchMovieAPI(keyword: String,pageNumber: Int,type: String) -> Observable<APIResult<HomeMovieListResopnse>> {
+        return API.handleDataRequest(dataRequest: APIManager.shared.requestObservable(api: APIRouter.searchMovie(keyword: keyword, pageNumber: pageNumber, type: type))).map({ (response) -> APIResult<HomeMovieListResopnse> in
+            let isSuccessfullTuple = API.isAPISuccessful(response: response)
+            if !isSuccessfullTuple.0{
+                return APIResult.failure(error: isSuccessfullTuple.1!)
+            }
+            let apiResponse = HomeMovieListResopnse(response: response)
+            let (apiStatus, _) = (true, APICallError.init(status: .success))
+            if apiStatus { return APIResult.success(value: apiResponse) }
+        })
+    }
+
     private static func handleDataRequest(dataRequest: Observable<DataRequest>) -> Observable<[String:Any]?> {
 
         if NetworkReachabilityManager()!.isReachable == false {

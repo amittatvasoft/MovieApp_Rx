@@ -24,11 +24,11 @@ class HomeMovieCollectionViewCell: FSPagerViewCell {
 //                newFrame.origin.y = newFrame.origin.y + 40
 //                self.vwBuyTicket.frame = newFrame
                 self.vwBuyTicket.isHidden = false
-                buyTktBottomConstraint.constant = 30
+                //buyTktBottomConstraint.constant = 30
                 self.vwBuyTicket.layoutIfNeeded()
             }else{
                 vwBuyTicket.isHidden = true
-                buyTktBottomConstraint.constant = 0
+                //buyTktBottomConstraint.constant = 0
                 self.vwBuyTicket.layoutIfNeeded()
             }
         }

@@ -17,35 +17,9 @@ extension ActivityIndicatorViewable where Self: UIViewController {
     func showActivityIndicator(in _containerView:UIView? = nil) -> Void {
 
         HUD.show()
-        /*
-
-        var containerView:UIView = self.view
-        
-        if let _containerView = _containerView {
-            containerView = _containerView
-        }
-        
-        hideActivityIndicator(from: containerView)
-        
-        let hud = MBProgressHUD.showAdded(to: containerView, animated: true)
-        hud.mode = MBProgressHUDMode.indeterminate
-        hud.backgroundView.color =  UIColor.black.withAlphaComponent(0.3)
-        hud.backgroundView.style = .solidColor
-        hud.show(animated: true)
-        */
     }
     
     func hideActivityIndicator(from _containerView:UIView? = nil) -> Void {
-
         HUD.hide()
-        /*
-        var containerView:UIView = self.view
-        
-        if let _containerView = _containerView {
-            containerView = _containerView
-        }
-        
-        MBProgressHUD.hideAllHUDs(for: containerView, animated: true)
-        */
     }
 }

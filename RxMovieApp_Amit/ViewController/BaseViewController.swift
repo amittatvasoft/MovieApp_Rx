@@ -63,22 +63,28 @@ class BaseViewController: UIViewController, ActivityIndicatorViewable,Navigation
 
 extension NavigationProtocol where Self: BaseViewController{
     func configureNavigationWithTitle(leftTitle: String? = nil,leftButtonImage: UIImage? = nil , title: String, rightTitle: String? = nil, rightButtonImage: UIImage? = nil){
-        self.title = title
-        if leftTitle != nil {
+        self.navigationItem.title = title
+        if leftTitle != nil{
             let leftButton = UIBarButtonItem.init(title: leftTitle, style: .plain, target: self, action: #selector(self.leftBarButtonDidTapped))
+            leftButton.tintColor = .black
             self.navigationItem.leftBarButtonItem = leftButton
-        } else if leftButtonImage != nil {
+        }else if leftButtonImage != nil{
             let leftButton = UIBarButtonItem.init(image: leftButtonImage, style: .plain, target: self, action: #selector(self.leftBarButtonDidTapped))
+            leftButton.tintColor = .black
             self.navigationItem.leftBarButtonItem = leftButton
+        }else{
+            let backButton = UIBarButtonItem()
+            backButton.tintColor = .black
+            backButton.title = "Back"
+            self.navigationController!.navigationBar.topItem!.backBarButtonItem = backButton
         }
-
-        if rightTitle != nil {
+        if rightTitle != nil{
             let rightButton = UIBarButtonItem.init(title: rightTitle, style: .plain, target: self, action: #selector(self.rightBarButtonDidTapped))
-
+            rightButton.tintColor = .black
             self.navigationItem.rightBarButtonItem = rightButton
-        } else if rightButtonImage != nil {
+        }else if rightButtonImage != nil{
             let rightButton = UIBarButtonItem.init(image: rightButtonImage, style: .plain, target: self, action: #selector(self.rightBarButtonDidTapped))
-            rightButton.tintColor = UIColor.black
+            rightButton.tintColor = .black
             self.navigationItem.rightBarButtonItem = rightButton
         }
     }

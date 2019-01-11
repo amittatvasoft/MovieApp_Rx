@@ -41,9 +41,10 @@ extension UIImageView {
             self.image = placeholderImage
             return
         }
-        self.kf.setImage(with: imageURL, placeholder: placeholderImage, options: [.transition(.fade(0.1))], progressBlock: nil, completionHandler: { (image, error, cacheType, _url) in
-            //self.image = image
-        })
+
+        self.kf.setImage(with: imageURL, placeholder: placeholderImage, options: [.transition(.fade(0.1))], progressBlock: nil) { (result) in
+
+        }
     }
     
 }

@@ -47,7 +47,7 @@ class RootCoordinator: Coordinator<Void>{
         viewController.viewModel = viewModel
         let navVC = UINavigationController(rootViewController: viewController)
         viewModel.dismiss.asObservable()
-            .subscribe(onNext: { [weak self] _ in
+            .subscribe(onNext: { 
                 navVC.dismiss(animated: true, completion: nil)
             }).disposed(by: self.disposeBag)
 

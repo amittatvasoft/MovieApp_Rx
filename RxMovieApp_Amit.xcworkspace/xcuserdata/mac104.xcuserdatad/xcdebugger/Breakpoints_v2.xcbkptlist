@@ -16,15 +16,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxMovieApp_Amit/RxActivityViewable/ActivityIndicatorViewable.swift"
-            timestampString = "568909823.904868"
+            timestampString = "568912933.498246"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "hideActivityIndicator(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -32,15 +32,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxMovieApp_Amit/RxActivityViewable/ActivityIndicatorViewable.swift"
-            timestampString = "568909823.9055049"
+            timestampString = "568912933.498621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "showActivityIndicator(in:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,6 +58,22 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "setupBindingForBaseViewModel(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxMovieApp_Amit/ViewController/MovieListPageContainerViewController.swift"
+            timestampString = "568912933.498783"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "selectViewControllerAtIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

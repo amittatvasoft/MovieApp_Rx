@@ -45,6 +45,7 @@ extension MovieListViewModel{
     func callGetMovieListAPI(){
 
         let _pageNumber = pageNumber
+
         self.dependencies.api.searchMovieAPI(keyword: self.searchString,pageNumber: pageNumber,type: launchOption.rawValue)
             .trackActivity(pageNumber == 1 ? isLoading : ActivityIndicator())
             .observeOn(SerialDispatchQueueScheduler(qos: .default))

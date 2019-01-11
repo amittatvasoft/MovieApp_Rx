@@ -15,8 +15,13 @@ protocol ActivityIndicatorViewable {
 extension ActivityIndicatorViewable where Self: UIViewController {
     
     func showActivityIndicator(in _containerView:UIView? = nil) -> Void {
+        var containerView:UIView = self.view
 
-        HUD.show()
+        if let _containerView = _containerView {
+            containerView = _containerView
+        }
+
+        HUD.show(viewToshow: containerView)
     }
     
     func hideActivityIndicator(from _containerView:UIView? = nil) -> Void {

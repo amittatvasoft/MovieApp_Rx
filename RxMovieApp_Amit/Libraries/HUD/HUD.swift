@@ -13,7 +13,7 @@ class HUD: UIView {
     static private var backGroundView: UIView?
     static var progressTintColor = UIColor.black
     
-    class func show() {
+    class func show(viewToshow: UIView? = nil) {
         HUD.hide()
         DispatchQueue.main.async {
             
@@ -23,8 +23,9 @@ class HUD: UIView {
             let indicatorView = IndicatorView(progressIndicatorColor: HUD.progressTintColor)
             backGroundView!.addSubview(indicatorView)
             indicatorView.center = (backGroundView?.center)!
-            
+
             (UIApplication.shared.delegate)!.window!!.addSubview(backGroundView!)
+
         }
     }
     

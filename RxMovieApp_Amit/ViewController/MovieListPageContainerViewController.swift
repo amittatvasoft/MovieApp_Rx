@@ -33,7 +33,7 @@ extension MovieListPageContainerViewController{
     }
 
     private func setupUI(){
-        self.configureNavigationWithTitle(title: "Movies")
+        self.configureNavigationWithTitle(title: "")
     }
 
     private func setupBinding(viewModel: MovieListPageContainerViewModel){
